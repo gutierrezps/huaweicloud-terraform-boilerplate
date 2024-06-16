@@ -6,7 +6,7 @@
     alt="Huawei Cloud" width="450px" height="102px">
 </a>
 
-🌐 **Idioma**: [English](./README) | **Português**
+🌐 **Idioma**: [English](./README.md) | **Português**
 
 Este projeto contém uma estrutura mínima para projetos Terraform usando o
 provider da Huawei Cloud, seguindo algumas práticas e referências encontradas
@@ -15,10 +15,10 @@ na internet (listadas ao final).
 Veja a [documentação do provider Terraform da Huawei Cloud](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
 para saber quais recursos estão disponíveis e como usá-los.
 
-## [👣 Primeiros Passos](./doc/FIRST_STEPS.pt)
+## [👣 Primeiros Passos](./doc/FIRST_STEPS.pt.md)
 
 Se você está começando com Terraform agora, leia os
-[Primeiros Passos](./doc/FIRST_STEPS.pt).
+[Primeiros Passos](./doc/FIRST_STEPS.pt.md).
 
 ## 📃 Estrutura
 

@@ -1,8 +1,8 @@
 # 👣 First Steps with Huawei Cloud Terraform
 
-🔙 Back to [README](../README).
+🔙 Back to [README](../README.md).
 
-🌐 **Language**: **English** | [Português](./FIRST_STEPS.pt)
+🌐 **Language**: **English** | [Português](./FIRST_STEPS.pt.md)
 
 ## Installation
 
