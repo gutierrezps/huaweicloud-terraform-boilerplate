@@ -4,7 +4,15 @@
 
 🌐 **Language**: **English** | [Português](./FIRST_STEPS.pt.md)
 
-## Installation
+- [👣 First Steps with Huawei Cloud Terraform](#-first-steps-with-huawei-cloud-terraform)
+  - [⚙ Installation](#-installation)
+    - [Windows](#windows)
+    - [Ubuntu/Debian](#ubuntudebian)
+  - [🔐 Creating an access key (AK and SK)](#-creating-an-access-key-ak-and-sk)
+  - [👩‍💻 Main Commands](#-main-commands)
+  - [😣 Troubleshooting](#-troubleshooting)
+
+## ⚙ Installation
 
 Install Terraform: <https://developer.hashicorp.com/terraform/install>
 
@@ -16,7 +24,7 @@ Install Terraform: <https://developer.hashicorp.com/terraform/install>
 3. Open a command prompt or Powershell and run `terraform.exe -version` to
    confirm it was installed successfully.
 
-## Ubuntu/Debian
+### Ubuntu/Debian
 
 Run the following commands:
 
@@ -37,7 +45,7 @@ Check if Terraform is installed:
 terraform -version
 ```
 
-## Creating an access key (AK and SK)
+## 🔐 Creating an access key (AK and SK)
 
 An access key comprises an **access key ID (AK)** and **secret access key (SK)**,
 and is used as a long-term identity credential to sign your requests for Huawei
@@ -79,7 +87,7 @@ To create an access key for your account, first log in to
 6. On the second line, the second part is the Access Key (AK), and the third
    part is the Secret Key (SK).
 
-## Main Commands
+## 👩‍💻 Main Commands
 
 `terraform init` - Initializes Terraform provider and modules
 
@@ -93,7 +101,7 @@ To create an access key for your account, first log in to
 format (DOT language) and saves it to `graph.txt` file. You can use the
 <https://dreampuf.github.io/GraphvizOnline/> website to view the graph.
 
-## Troubleshooting
+## 😣 Troubleshooting
 
 If you encounter an error message that is unclear, or if you identified a
 problem while using the provider, it is possible to configure Terraform to

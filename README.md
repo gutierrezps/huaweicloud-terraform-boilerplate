@@ -15,11 +15,17 @@ web (listed at the end).
 Read [Huawei Cloud Terraform provider documentation](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
 to know which resources are available and how to use them.
 
+- [Huawei Cloud Terraform Boilerplate](#huawei-cloud-terraform-boilerplate)
+  - [👣 First Steps](#-first-steps)
+  - [� Structure](#-structure)
+  - [✒ Style Convention](#-style-convention)
+  - [🔍 References](#-references)
+
 ## [👣 First Steps](./doc/FIRST_STEPS.md)
 
 If you are new to Terraform, read the [First Steps](./doc/FIRST_STEPS.md).
 
-## 📃 Structure
+## 📋 Structure
 
 - `main.tf` - primary entrypoint
 - `variables.tf` - declarations for variables

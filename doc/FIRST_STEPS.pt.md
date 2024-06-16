@@ -4,7 +4,15 @@
 
 🌐 **Idioma**: [English](./FIRST_STEPS.md) | **Português**
 
-## Instalação
+- [👣 Primeiros Passos com Huawei Cloud Terraform](#-primeiros-passos-com-huawei-cloud-terraform)
+  - [⚙ Instalação](#-instalação)
+    - [Windows](#windows)
+    - [Ubuntu/Debian](#ubuntudebian)
+  - [🔐 Criando uma chave de acesso (AK e SK)](#-criando-uma-chave-de-acesso-ak-e-sk)
+  - [👩‍💻 Comandos Principais](#-comandos-principais)
+  - [😣 Diagnóstico de problemas](#-diagnóstico-de-problemas)
+
+## ⚙ Instalação
 
 Instale o Terraform: <https://developer.hashicorp.com/terraform/install>
 
@@ -16,7 +24,7 @@ Instale o Terraform: <https://developer.hashicorp.com/terraform/install>
 3. Abra o Prompt de Comando ou o PowerShell e execute `terraform.exe -version`
    para confirmar que foi instalado com sucesso.
 
-## Ubuntu/Debian
+### Ubuntu/Debian
 
 Execute os seguintes comandos:
 
@@ -37,7 +45,7 @@ Verifique se o Terraform foi instalado:
 terraform -version
 ```
 
-## Criando uma chave de acesso (AK e SK)
+## 🔐 Criando uma chave de acesso (AK e SK)
 
 Uma chave de acesso compreende uma **access key ID (AK)** e uma
 **secret access key (SK)**, e é usado como uma credencial de identidade de
@@ -80,7 +88,7 @@ Para criar uma chave de acesso para sua conta, primeiro realize o login no
 6. Na segunda linha, a segunda parte é a Access Key (AK), e a terceira parte é
    a Secret Key (SK).
 
-## Comandos Principais
+## 👩‍💻 Comandos Principais
 
 `terraform init` - Inicializa o provider e os módulos do Terraform
 
@@ -94,7 +102,7 @@ Para criar uma chave de acesso para sua conta, primeiro realize o login no
 de grafo (DOT language), e salva no arquivo `graph.txt`. Você pode usar o site
 <https://dreampuf.github.io/GraphvizOnline/> para visualizar o grafo.
 
-## Diagnóstico de problemas
+## 😣 Diagnóstico de problemas
 
 Caso você encontre alguma mensagem de erro que não seja clara, ou se você
 identificou algum problema durante o uso do provider, é possível fazer com que

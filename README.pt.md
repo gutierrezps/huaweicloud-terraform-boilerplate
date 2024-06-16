@@ -15,12 +15,18 @@ na internet (listadas ao final).
 Veja a [documentação do provider Terraform da Huawei Cloud](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
 para saber quais recursos estão disponíveis e como usá-los.
 
+- [Huawei Cloud Terraform Boilerplate](#huawei-cloud-terraform-boilerplate)
+  - [👣 Primeiros Passos](#-primeiros-passos)
+  - [� Estrutura](#-estrutura)
+  - [✒ Convenção de Estilo](#-convenção-de-estilo)
+  - [🔍 Referências](#-referências)
+
 ## [👣 Primeiros Passos](./doc/FIRST_STEPS.pt.md)
 
 Se você está começando com Terraform agora, leia os
 [Primeiros Passos](./doc/FIRST_STEPS.pt.md).
 
-## 📃 Estrutura
+## 📋 Estrutura
 
 - `main.tf` - arquivo principal
 - `variables.tf` - definições de variáveis (variable)
