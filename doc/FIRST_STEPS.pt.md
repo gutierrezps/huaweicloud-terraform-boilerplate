@@ -79,3 +79,43 @@ Para criar uma chave de acesso para sua conta, primeiro realize o login no
 
 6. Na segunda linha, a segunda parte é a Access Key (AK), e a terceira parte é
    a Secret Key (SK).
+
+## Comandos Principais
+
+`terraform init` - Inicializa o provider e os módulos do Terraform
+
+`terraform plan` - Verificar o que será executado pelo Terraform
+
+`terraform apply` - Executa as modificações na infraestrutura
+
+`terraform fmt` - Formata o código automaticamente
+
+`terraform graph > graph.txt` - Gera uma descrição da infraestrutura em formato
+de grafo (DOT language), e salva no arquivo `graph.txt`. Você pode usar o site
+<https://dreampuf.github.io/GraphvizOnline/> para visualizar o grafo.
+
+## Diagnóstico de problemas
+
+Caso você encontre alguma mensagem de erro que não seja clara, ou se você
+identificou algum problema durante o uso do provider, é possível fazer com que
+o Terraform gere logs para debug ao configurar as variáveis de ambiente
+`TF_LOG` e `TF_LOG_PATH`.
+
+Se estiver usando Windows, execute os seguintes comandos no PowerShell:
+
+```powershell
+$Env:TF_LOG="DEBUG"
+$Env:TF_LOG_PATH="tf_log.txt"
+```
+
+Se estiver usando Linux, execute os seguintes comandos no Shell:
+
+```bash
+export TF_LOG="DEBUG"
+export TF_LOG_PATH="tf_log.txt"
+```
+
+Em seguida, execute o comando Terraform novamente. Os logs para debug serão
+salvos no arquivo `tf_log.txt`. Note que essa configuração de debug só se
+aplica para o mesmo terminal no qual as variáveis de ambiente foram
+configuradas.
