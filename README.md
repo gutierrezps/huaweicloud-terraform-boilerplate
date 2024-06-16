@@ -1,12 +1,27 @@
 # Huawei Cloud Terraform Boilerplate
 
+<!-- markdownlint-disable MD033 -->
+<center>
+  <a href="https://www.huaweicloud.com/" target="_blank">
+    <img src="https://console-static.huaweicloud.com/static/authui/20210202115135/public/custom/images/logo-en.svg"
+      alt="Huawei Cloud" width="450px" height="102px">
+  </a>
+
+  🌐 **Language**: **English** | [Português](./README.pt)
+</center>
+
 This project contains a minimal structure for Terraform projects using Huawei
 Cloud provider, following some practices and references found around the
 web (listed at the end).
 
-[Huawei Cloud Terraform provider documentation](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
+Read [Huawei Cloud Terraform provider documentation](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
+to know which resources are available and how to use them.
 
-## Structure
+## [👣 First Steps](./doc/FIRST_STEPS)
+
+If you are new to Terraform, read the [First Steps](./doc/FIRST_STEPS).
+
+## 📃 Structure
 
 - `main.tf` - primary entrypoint
 - `variables.tf` - declarations for variables
@@ -15,7 +30,7 @@ web (listed at the end).
 - `terraform.tfvars` - derived from `terraform.tfvars.example`, contains custom
   values for variables. This file should not be commited to the repository.
 
-## Style Convention
+## ✒ Style Convention
 
 In order to ensure consistency across your project, follow some conventions:
 
@@ -28,7 +43,7 @@ In order to ensure consistency across your project, follow some conventions:
 Except for identifiers naming, all the other conventions are automatically
 applied by running `terraform fmt` command.
 
-## References
+## 🔍 References
 
 - Terraform's [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 - Digital Ocean's [How To Structure a Terraform Project](https://www.digitalocean.com/community/tutorials/how-to-structure-a-terraform-project)
