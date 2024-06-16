@@ -1,14 +1,12 @@
 # Huawei Cloud Terraform Boilerplate
 
 <!-- markdownlint-disable MD033 -->
-<center>
-  <a href="https://www.huaweicloud.com/" target="_blank">
-    <img src="https://console-static.huaweicloud.com/static/authui/20210202115135/public/custom/images/logo-en.svg"
-      alt="Huawei Cloud" width="450px" height="102px">
-  </a>
+<a href="https://www.huaweicloud.com/intl/en-us" target="_blank">
+  <img src="https://console-static.huaweicloud.com/static/authui/20210202115135/public/custom/images/logo-en.svg"
+    alt="Huawei Cloud" width="450px" height="102px">
+</a>
 
-  🌐 **Language**: **English** | [Português](./README.pt)
-</center>
+🌐 **Language**: **English** | [Português](./README.pt)
 
 This project contains a minimal structure for Terraform projects using Huawei
 Cloud provider, following some practices and references found around the
