@@ -5,15 +5,15 @@
 🌐 **Language**: **English** | [Português](./FIRST_STEPS.pt.md)
 
 - [👣 First Steps with Terraform and Huawei Cloud](#-first-steps-with-terraform-and-huawei-cloud)
-  - [⚙ Installation](#-installation)
+  - [💿 Terraform installation](#-terraform-installation)
     - [Windows (simple)](#windows-simple)
     - [Windows (advanced)](#windows-advanced)
     - [Ubuntu/Debian](#ubuntudebian)
-  - [🔐 Creating an access key (AK and SK)](#-creating-an-access-key-ak-and-sk)
-  - [👩‍💻 Main Commands](#-main-commands)
+  - [🔑 Creating an access key (AK and SK)](#-creating-an-access-key-ak-and-sk)
+  - [👩‍💻 Main Terraform commands](#-main-terraform-commands)
   - [😣 Troubleshooting](#-troubleshooting)
 
-## ⚙ Installation
+## 💿 Terraform installation
 
 Install Terraform: <https://developer.hashicorp.com/terraform/install>
 
@@ -88,7 +88,7 @@ Terraform v.18.5
 on linux_amd64
 ```
 
-## 🔐 Creating an access key (AK and SK)
+## 🔑 Creating an access key (AK and SK)
 
 An access key comprises an **access key ID (AK)** and **secret access key (SK)**,
 and is used as a long-term identity credential to sign your requests for Huawei
@@ -130,15 +130,17 @@ To create an access key for your Huawei Cloud account, first log in to
 6. On the second line, the second part is the Access Key (AK), and the third
    part is the Secret Key (SK).
 
-## 👩‍💻 Main Commands
+## 👩‍💻 Main Terraform commands
 
 `terraform init` - Initializes Terraform provider and modules
+
+`terraform fmt` - Formats the Terraform code automatically
+
+`terraform validate` - Checks if code syntax is correct
 
 `terraform plan` - Outputs what will be executed by Terraform
 
 `terraform apply` - Executes the infrastructure changes
-
-`terraform fmt` - Formats the Terraform code automatically
 
 `terraform graph > graph.txt` - Generate a instructure description in a graph
 format (DOT language) and saves it to `graph.txt` file. You can use the

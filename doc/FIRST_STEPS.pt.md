@@ -5,15 +5,15 @@
 🌐 **Idioma**: [English](./FIRST_STEPS.md) | **Português**
 
 - [👣 Primeiros Passos com Terraform e Huawei Cloud](#-primeiros-passos-com-terraform-e-huawei-cloud)
-  - [⚙ Instalação](#-instalação)
+  - [💿 Instalação do Terraform](#-instalação-do-terraform)
     - [Windows (simples)](#windows-simples)
     - [Windows (avançado)](#windows-avançado)
     - [Ubuntu/Debian](#ubuntudebian)
-  - [🔐 Criando uma chave de acesso (AK e SK)](#-criando-uma-chave-de-acesso-ak-e-sk)
-  - [👩‍💻 Comandos Principais](#-comandos-principais)
+  - [🔑 Criando uma chave de acesso (AK e SK)](#-criando-uma-chave-de-acesso-ak-e-sk)
+  - [👩‍💻 Comandos principais do Terraform](#-comandos-principais-do-terraform)
   - [😣 Diagnóstico de problemas](#-diagnóstico-de-problemas)
 
-## ⚙ Instalação
+## 💿 Instalação do Terraform
 
 Instale o Terraform: <https://developer.hashicorp.com/terraform/install>
 
@@ -88,9 +88,9 @@ Terraform v.18.5
 on linux_amd64
 ```
 
-## 🔐 Criando uma chave de acesso (AK e SK)
+## 🔑 Criando uma chave de acesso (AK e SK)
 
-Uma chave de acesso compreende uma **access key ID (AK)** e uma
+Uma chave de acesso é composta por uma **access key ID (AK)** e uma
 **secret access key (SK)**, e é usada como uma credencial de identidade de
 longo prazo para assinar suas requisições para as APIs da Huawei Cloud (feitas
 pelo provider do Terraform). O AK é usado junto com o SK para assinar
@@ -131,15 +131,17 @@ login no [Console da Huawei Cloud](https://console-intl.huaweicloud.com/).
 6. Na segunda linha, a segunda parte é a Access Key (AK), e a terceira parte é
    a Secret Key (SK).
 
-## 👩‍💻 Comandos Principais
+## 👩‍💻 Comandos principais do Terraform
 
 `terraform init` - Inicializa o provider e os módulos do Terraform
+
+`terraform fmt` - Formata o código automaticamente
+
+`terraform validate` - Verifica se o código está correto
 
 `terraform plan` - Verificar o que será executado pelo Terraform
 
 `terraform apply` - Executa as modificações na infraestrutura
-
-`terraform fmt` - Formata o código automaticamente
 
 `terraform graph > graph.txt` - Gera uma descrição da infraestrutura em formato
 de grafo (DOT language), e salva no arquivo `graph.txt`. Você pode usar o site
