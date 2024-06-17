@@ -5,6 +5,7 @@ variable "hwc_access_key" {
 
 variable "hwc_secret_key" {
   type        = string
+  sensitive   = true
   description = "Secret Access Key (SK) of your Huawei Cloud account or IAM User"
 }
 
@@ -20,5 +21,12 @@ variable "availability_zone" {
 
 variable "default_password" {
   type        = string
+  sensitive   = true
   description = "Default password for resources"
+}
+
+variable "enterprise_project" {
+  type        = string
+  default     = "default"
+  description = "Default Enterprise Project for resources"
 }
