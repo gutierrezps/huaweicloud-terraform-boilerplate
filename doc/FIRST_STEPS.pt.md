@@ -6,7 +6,8 @@
 
 - [👣 Primeiros Passos com Huawei Cloud Terraform](#-primeiros-passos-com-huawei-cloud-terraform)
   - [⚙ Instalação](#-instalação)
-    - [Windows](#windows)
+    - [Windows (simples)](#windows-simples)
+    - [Windows (avançado)](#windows-avançado)
     - [Ubuntu/Debian](#ubuntudebian)
   - [🔐 Criando uma chave de acesso (AK e SK)](#-criando-uma-chave-de-acesso-ak-e-sk)
   - [👩‍💻 Comandos Principais](#-comandos-principais)
@@ -16,13 +17,52 @@
 
 Instale o Terraform: <https://developer.hashicorp.com/terraform/install>
 
-### Windows
+### Windows (simples)
 
-1. Baixe o arquivo zip;
-2. Extraia o arquivo `terraform.exe` nesta pasta, na pasta `C:\Windows` (ou em
-   outra pasta que esteja no path do sistema operacional);
-3. Abra o Prompt de Comando ou o PowerShell e execute `terraform.exe -version`
-   para confirmar que foi instalado com sucesso.
+1. Baixe o arquivo zip para Windows AMD64 (disponível no link acima);
+2. Extraia o arquivo `terraform.exe` na pasta anterior (isto é, na mesma pasta
+   que o arquivo `main.tf`);
+3. Abra o PowerShell na pasta anterior e execute `./terraform version` para
+   confirmar que foi instalado com sucesso. Você deve ver algo assim:
+
+      ```plain
+      > ./terraform version
+      Terraform v1.8.5
+      on windows_amd64
+      ```
+
+### Windows (avançado)
+
+1. Baixe o arquivo zip para Windows AMD64 (disponível no link acima);
+2. Crie a pasta `C:\Programs\Terraform` e extraia o arquivo `terraform.exe`
+   dentro dela;
+3. Abra o menu Iniciar do Windows, procure por "variáveis de ambiente do
+   sistema" e clique em "Editar as variáveis de ambiente do sistema"
+
+   !["Editar as variáveis de ambiente do sistema" no Menu Iniciar](img/windows-start-system-variables.pt.jpg)
+
+4. Clique em "Environment Variables..." button in the bottom right
+
+   ![Botão "Variáveis de Ambiente..." na janela "Propriedades do Sistema"](img/system-properties-environment-variables.pt.JPG)
+
+5. Selecione a opção "Path" dentro de "Variáveis do sistema" e clique em
+   "Editar..." na parte de baixo:
+
+   !["Path" dentro de "Variáveis do sistema", e botão "Editar..."](img/system-variables-path-edit.pt.jpg)
+
+6. Clique em "Novo" do lado direito e adicione `C:\Programs\Terraform`. Em
+   seguida, clique em "OK" em todas as janelas.
+
+   ![Botão "Novo" do lado direito, adicione uma linha com "C:\Programs\Terraform"](img/edit-environment-variable-new.pt.JPG)
+
+7. Abra o Prompt de Comando ou PowerShell e execute `terraform version` para
+   confirmar que foi instalado com sucesso. Você deve ver algo assim:
+
+      ```plain
+      > terraform version
+      Terraform v1.8.5
+      on windows_amd64
+      ```
 
 ### Ubuntu/Debian
 
@@ -39,24 +79,27 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install -y terraform
 ```
 
-Verifique se o Terraform foi instalado:
+Execute o comando `terraform version` para confirmar que o Terraform foi
+instalado. Você deve ver algo assim:
 
-```sh
-terraform -version
+```plain
+$ terraform version
+Terraform v.18.5
+on linux_amd64
 ```
 
 ## 🔐 Criando uma chave de acesso (AK e SK)
 
 Uma chave de acesso compreende uma **access key ID (AK)** e uma
-**secret access key (SK)**, e é usado como uma credencial de identidade de
-longo prazo para assinar suas requisições para as APIs da Huawei Cloud (usadas
+**secret access key (SK)**, e é usada como uma credencial de identidade de
+longo prazo para assinar suas requisições para as APIs da Huawei Cloud (feitas
 pelo provider do Terraform). O AK é usado junto com o SK para assinar
 requisições criptograficamente, garantindo que as requisições sejam secretas,
 completas, e corretas. Para mais detalhes, consulte a
 [documentação de Chaves de Acesso](https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_01_0003.html)
 
-Para criar uma chave de acesso para sua conta, primeiro realize o login no
-[Console da Huawei Cloud](https://console-intl.huaweicloud.com/).
+Para criar uma chave de acesso para sua conta Huawei Cloud, faça primeiro o
+login no [Console da Huawei Cloud](https://console-intl.huaweicloud.com/).
 
 1. Passe o mouse em cima do seu nome de usuário no canto superior direito (A)
    e clique em "My Credentials" (B) no menu dropdown;

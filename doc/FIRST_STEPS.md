@@ -6,7 +6,8 @@
 
 - [👣 First Steps with Huawei Cloud Terraform](#-first-steps-with-huawei-cloud-terraform)
   - [⚙ Installation](#-installation)
-    - [Windows](#windows)
+    - [Windows (simple)](#windows-simple)
+    - [Windows (advanced)](#windows-advanced)
     - [Ubuntu/Debian](#ubuntudebian)
   - [🔐 Creating an access key (AK and SK)](#-creating-an-access-key-ak-and-sk)
   - [👩‍💻 Main Commands](#-main-commands)
@@ -16,13 +17,52 @@
 
 Install Terraform: <https://developer.hashicorp.com/terraform/install>
 
-### Windows
+### Windows (simple)
 
-1. Download the zip file
-2. Extract `terraform.exe` in `C:\Windows` folder (or in another folder which
-   is added to your system path);
-3. Open a command prompt or Powershell and run `terraform.exe -version` to
-   confirm it was installed successfully.
+1. Download the zip file for Windows AMD64 (available in the link above);
+2. Extract file `terraform.exe` in the parent folder (that is, in the same
+   folder as `main.tf` file);
+3. Open PowerShell in the parent folder and run `./terraform version` to
+   confirm it was installed successfully. You should see something like this:
+
+      ```plain
+      > ./terraform version
+      Terraform v1.8.5
+      on windows_amd64
+      ```
+
+### Windows (advanced)
+
+1. Download the zip file for Windows AMD64 (available in the link above);
+2. Create folder `C:\Programs\Terraform` and extract file `terraform.exe`
+   inside it;
+3. Open Windows Start menu, search for "system variables" and click on "Edit
+   the system environment variables"
+
+   !["Edit the system environment variables" option in Start Menu](img/windows-start-system-variables.jpg)
+
+4. Click on "Environment Variables..." button in the bottom right
+
+   !["Environment Variables..." button in System Properties dialog](img/system-properties-environment-variables.JPG)
+
+5. Select "Path" inside "System variables" and click on "Edit" in the bottom
+   part:
+
+   !["Path" inside "System variables", and "Edit" button](img/system-variables-path-edit.jpg)
+
+6. Click on "New" in the right side and add `C:\Programs\Terraform`. Then, click
+   on "OK" on all windows.
+
+   !["New" button on the right side, add a line with "C:\Programs\Terraform" content](img/edit-environment-variable-new.JPG)
+
+7. Open Command Prompt or PowerShell and run `terraform version` to confirm it
+   was installed successfully. You should see something like this:
+
+      ```plain
+      > terraform version
+      Terraform v1.8.5
+      on windows_amd64
+      ```
 
 ### Ubuntu/Debian
 
@@ -39,22 +79,25 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install -y terraform
 ```
 
-Check if Terraform is installed:
+Run command `terraform version` to confirm that Terraform is installed. You
+should see something like this:
 
-```sh
-terraform -version
+```plain
+$ terraform version
+Terraform v.18.5
+on linux_amd64
 ```
 
 ## 🔐 Creating an access key (AK and SK)
 
 An access key comprises an **access key ID (AK)** and **secret access key (SK)**,
 and is used as a long-term identity credential to sign your requests for Huawei
-Cloud APIs (used by Terraform provider). AK is used together with SK to sign
+Cloud APIs (made by Terraform provider). AK is used together with SK to sign
 requests cryptographically, ensuring that the requests are secret, complete,
 and correct. For more details, see
 [Access Keys documentation](https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_01_0003.html)
 
-To create an access key for your account, first log in to
+To create an access key for your Huawei Cloud account, first log in to
 [Huawei Cloud Console](https://console-intl.huaweicloud.com/).
 
 1. Put your mouse over your username in the top right corner (A) and click on
