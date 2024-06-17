@@ -1,10 +1,10 @@
-# 👣 First Steps with Huawei Cloud Terraform
+# 👣 First Steps with Terraform and Huawei Cloud
 
 🔙 Back to [README](../README.md).
 
 🌐 **Language**: **English** | [Português](./FIRST_STEPS.pt.md)
 
-- [👣 First Steps with Huawei Cloud Terraform](#-first-steps-with-huawei-cloud-terraform)
+- [👣 First Steps with Terraform and Huawei Cloud](#-first-steps-with-terraform-and-huawei-cloud)
   - [⚙ Installation](#-installation)
     - [Windows (simple)](#windows-simple)
     - [Windows (advanced)](#windows-advanced)
