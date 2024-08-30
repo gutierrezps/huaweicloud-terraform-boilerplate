@@ -1,5 +1,6 @@
 hwc_access_key="..."
 hwc_secret_key="..."
-region="sa-brazil-1"
-availability_zone="sa-brazil-1a"
+region="sa-brazil-1"                # LA-Sao Paulo1
+availability_zone="sa-brazil-1a"    # AZ1
 default_password="..."
+enterprise_project="default"
