@@ -27,6 +27,12 @@ para saber quais recursos estão disponíveis e como usá-los.
 Se você está começando com Terraform agora, leia os
 [Primeiros Passos](./doc/FIRST_STEPS.pt.md).
 
+Depois que você baixar este repositório ou clonar na sua máquina, faça uma
+cópia do arquivo `terraform.tfvars.example`, com nome `terraform.tfvars`, e
+atualize os valores das variáveis (principalmente `hwc_access_key`,
+`hwc_secret_key` e `default_password`) antes de usar os comandos
+`terraform plan` / `terraform apply`.
+
 ## 📋 Estrutura
 
 - `main.tf` - arquivo principal;

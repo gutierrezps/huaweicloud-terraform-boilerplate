@@ -25,6 +25,11 @@ to know which resources are available and how to use them.
 
 If you are new to Terraform, read the [First Steps](./doc/FIRST_STEPS.md).
 
+After you download this repository or clone to your machine, make a copy of
+`terraform.tfvars.example` file, named `terraform.tfvars`, and update the
+variables' values (`hwc_access_key`, `hwc_secret_key` and `default_password`)
+before running `terraform plan` / `terraform apply` commands.
+
 ## 📋 Structure
 
 - `main.tf` - primary entrypoint;

@@ -6,8 +6,7 @@
 
 - [👣 Primeiros Passos com Terraform e Huawei Cloud](#-primeiros-passos-com-terraform-e-huawei-cloud)
   - [💿 Instalação do Terraform](#-instalação-do-terraform)
-    - [Windows (simples)](#windows-simples)
-    - [Windows (avançado)](#windows-avançado)
+    - [Windows](#windows)
     - [Ubuntu/Debian](#ubuntudebian)
   - [🔑 Criando uma chave de acesso (AK e SK)](#-criando-uma-chave-de-acesso-ak-e-sk)
   - [👩‍💻 Comandos principais do Terraform](#-comandos-principais-do-terraform)
@@ -17,52 +16,37 @@
 
 Instale o Terraform: <https://developer.hashicorp.com/terraform/install>
 
-### Windows (simples)
+### Windows
 
-1. Baixe o arquivo zip para Windows AMD64 (disponível no link acima);
-2. Extraia o arquivo `terraform.exe` na pasta anterior (isto é, na mesma pasta
-   que o arquivo `main.tf`);
-3. Abra o PowerShell na pasta anterior e execute `./terraform version` para
-   confirmar que foi instalado com sucesso. Você deve ver algo assim:
+Abra o PowerShell e execute o comando `winget install HashiCorp.Terraform`.
 
-      ```plain
-      > ./terraform version
-      Terraform v1.8.5
-      on windows_amd64
-      ```
+```plain
+PS C:\> winget install HashiCorp.Terraform
+Found HashiCorp Terraform [Hashicorp.Terraform] Version 1.13.5
+This application is licensed to you by its owner.
+Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Downloading https://releases.hashicorp.com/terraform/1.13.5/terraform_1.13.5_windows_amd64.zip
+  ██████████████████████████████  28.9 MB / 28.9 MB
+Successfully verified installer hash
+Extracting archive...
+Successfully extracted archive
+Starting package install...
+Path environment variable modified; restart your shell to use the new value.
+Command line alias added: "terraform"
+Successfully installed
+PS C:\>
+```
 
-### Windows (avançado)
+Feche o PowerShell, abra-o novamente, e o comando `terraform` deve estar
+disponível. Execute o comando `terraform version` para confirmar que o
+Terraform está instalado. Você deve ver algo como:
 
-1. Baixe o arquivo zip para Windows AMD64 (disponível no link acima);
-2. Crie a pasta `C:\Programs\Terraform` e extraia o arquivo `terraform.exe`
-   dentro dela;
-3. Abra o menu Iniciar do Windows, procure por "variáveis de ambiente do
-   sistema" e clique em "Editar as variáveis de ambiente do sistema"
-
-   !["Editar as variáveis de ambiente do sistema" no Menu Iniciar](img/windows-start-system-variables.pt.jpg)
-
-4. Clique em "Environment Variables..." button in the bottom right
-
-   ![Botão "Variáveis de Ambiente..." na janela "Propriedades do Sistema"](img/system-properties-environment-variables.pt.JPG)
-
-5. Selecione a opção "Path" dentro de "Variáveis do sistema" e clique em
-   "Editar..." na parte de baixo:
-
-   !["Path" dentro de "Variáveis do sistema", e botão "Editar..."](img/system-variables-path-edit.pt.jpg)
-
-6. Clique em "Novo" do lado direito e adicione `C:\Programs\Terraform`. Em
-   seguida, clique em "OK" em todas as janelas.
-
-   ![Botão "Novo" do lado direito, adicione uma linha com "C:\Programs\Terraform"](img/edit-environment-variable-new.pt.JPG)
-
-7. Abra o Prompt de Comando ou PowerShell e execute `terraform version` para
-   confirmar que foi instalado com sucesso. Você deve ver algo assim:
-
-      ```plain
-      > terraform version
-      Terraform v1.8.5
-      on windows_amd64
-      ```
+```plain
+PS C:\> terraform version
+Terraform v1.13.5
+on windows_amd64
+PS C:\>
+```
 
 ### Ubuntu/Debian
 
@@ -71,10 +55,10 @@ Execute os seguintes comandos:
 ```sh
 sudo apt update && sudo apt install -y gnupg software-properties-common
 
-wget -O- https://apt.releases.hashicorp.com/gpg | \
+wget -O - https://apt.releases.hashicorp.com/gpg | \
   sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 
 sudo apt update && sudo apt install -y terraform
 ```
@@ -84,7 +68,7 @@ instalado. Você deve ver algo assim:
 
 ```plain
 $ terraform version
-Terraform v.18.5
+Terraform v1.13.5
 on linux_amd64
 ```
 
@@ -104,7 +88,7 @@ login no [Console da Huawei Cloud](https://console-intl.huaweicloud.com/).
 1. Passe o mouse em cima do seu nome de usuário no canto superior direito (A)
    e clique em "My Credentials" (B) no menu dropdown;
 
-    ![Opção "My Credentials" (B) abaixo do nome de usuário (A)](img/my-credentials.jpg)
+    ![Opção "My Credentials" (B) abaixo do nome de usuário (A)](img/my-credentials.png)
 
 2. No menu à esquerda, clique em "Access Keys" e em seguida clique em "Create
    Access Key";
