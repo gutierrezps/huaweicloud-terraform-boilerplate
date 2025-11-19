@@ -2,7 +2,7 @@ terraform {
   required_providers {
     huaweicloud = {
       source  = "huaweicloud/huaweicloud"
-      version = "~> 1.79.2"
+      version = "~> 1.80.3"
     }
   }
 }
