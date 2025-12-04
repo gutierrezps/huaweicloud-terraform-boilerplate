@@ -30,3 +30,8 @@ variable "enterprise_project" {
   default     = "default"
   description = "Default Enterprise Project for resources"
 }
+
+variable "obs_remote_state_bucket_name" {
+  type        = string
+  description = "OBS bucket name where state file will be stored"
+}

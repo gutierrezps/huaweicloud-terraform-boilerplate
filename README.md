@@ -23,12 +23,25 @@ to know which resources are available and how to use them.
 
 ## [👣 First Steps](./doc/FIRST_STEPS.md)
 
-If you are new to Terraform, read the [First Steps](./doc/FIRST_STEPS.md).
+If you are new to Terraform, read the [First Steps](./doc/FIRST_STEPS.md)
+documentation.
 
 After you download this repository or clone to your machine, make a copy of
 `terraform.tfvars.example` file, named `terraform.tfvars`, and update the
-variables' values (`hwc_access_key`, `hwc_secret_key` and `default_password`)
-before running `terraform plan` / `terraform apply` commands.
+variables' values (`hwc_access_key`, `hwc_secret_key` and `default_password`).
+
+If you wish to store the state file remotely, check the **First Steps**
+section of [Remote State configuration](./doc/remote_state.md) documentation.
+After setting up remote state storage, load the environment variables
+according to your operating system:
+
+- If you're on Windows, run `. .\Set-EnvVars.ps1`;
+- If you're on Linux, run `. set-env-vars.sh`;
+
+Otherwise, if you don't wish to use remote state storage, remove the
+`modules/obs-remote-state` folder and the `remote-state.tf` file.
+
+Finally, run `terraform plan` / `terraform apply` commands.
 
 ## 📋 Structure
 
@@ -36,6 +49,9 @@ before running `terraform plan` / `terraform apply` commands.
 - `variables.tf` - declarations for variables;
 - `outputs.tf` - declarations for outputs;
 - `providers.tf` - list required providers, versions and configurations;
+- `remote-state.tf` - Terraform [remote state storage](./doc/remote_state.md)
+  configuration file, which requires environment variables defined by `.env`
+  file (derived from `.env.example`);
 - `terraform.tfvars` - derived from `terraform.tfvars.example`, contains custom
   values for variables. This file should not be commited to the repository.
 

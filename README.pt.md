@@ -27,11 +27,25 @@ para saber quais recursos estão disponíveis e como usá-los.
 Se você está começando com Terraform agora, leia os
 [Primeiros Passos](./doc/FIRST_STEPS.pt.md).
 
-Depois que você baixar este repositório ou clonar na sua máquina, faça uma
-cópia do arquivo `terraform.tfvars.example`, com nome `terraform.tfvars`, e
-atualize os valores das variáveis (principalmente `hwc_access_key`,
-`hwc_secret_key` e `default_password`) antes de usar os comandos
-`terraform plan` / `terraform apply`.
+Após baixar este repositório ou cloná-lo para sua máquina, faça uma cópia do
+arquivo `terraform.tfvars.example`, renomeando-o para `terraform.tfvars`, e
+atualize os valores das variáveis (`hwc_access_key`, `hwc_secret_key` e
+`default_password`).
+
+Se desejar armazenar o arquivo de estado remotamente, consulte a seção
+**Primeiros Passos** da documentação
+[Configuração de Estado Remoto](./doc/remote_state.pt.md).
+
+Após configurar o armazenamento remoto de estado, carregue as variáveis de
+ambiente de acordo com o seu sistema operacional:
+
+- Se estiver no Windows, execute `..\Set-EnvVars.ps1`;
+- Se estiver no Linux, execute `. set-env-vars.sh`;
+
+Caso contrário, se não desejar usar o armazenamento remoto de estado, remova a
+pasta `modules/obs-remote-state` e o arquivo `remote-state.tf`.
+
+Finalmente, execute os comandos `terraform plan` / `terraform apply`.
 
 ## 📋 Estrutura
 
@@ -39,6 +53,10 @@ atualize os valores das variáveis (principalmente `hwc_access_key`,
 - `variables.tf` - definições de variáveis (variable);
 - `outputs.tf` - definições de saídas (output);
 - `providers.tf` - lista os providers utilizados, versões e configurações;
+- `remote-state.tf` - Arquivo de configuração do Terraform para
+  [armazenamento remoto de estado](./doc/remote_state.md), que requer
+  variáveis de ambiente definidas pelo arquivo `.env` (derivado do arquivo
+  `.env.example`);
 - `terraform.tfvars` - derivado do arquivo `terraform.tfvars.example`, contém
   valores para as variáveis. Este arquivo não é registrado no repositório.
 

@@ -35,3 +35,9 @@ terraform.rc
 
 # Default filename used for graph output (suggested in FIRST_STEPS doc file)
 graph.txt
+
+# Folder used for credentials and other local file outputs
+output/*
+!output/.gitkeep
+
+.env
