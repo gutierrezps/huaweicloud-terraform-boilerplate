@@ -80,10 +80,10 @@ longo prazo para assinar suas requisições para as APIs da Huawei Cloud (feitas
 pelo provider do Terraform). O AK é usado junto com o SK para assinar
 requisições criptograficamente, garantindo que as requisições sejam secretas,
 completas, e corretas. Para mais detalhes, consulte a
-[documentação de Chaves de Acesso](https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_01_0003.html)
+[documentação de Chaves de Acesso][ak].
 
 Para criar uma chave de acesso para sua conta Huawei Cloud, faça primeiro o
-login no [Console da Huawei Cloud](https://console-intl.huaweicloud.com/).
+login no [Console da Huawei Cloud][console].
 
 1. Passe o mouse em cima do seu nome de usuário no canto superior direito (A)
    e clique em "My Credentials" (B) no menu dropdown;
@@ -156,3 +156,6 @@ Em seguida, execute o comando Terraform novamente. Os logs para debug serão
 salvos no arquivo `tf_log.txt`. Note que essa configuração de debug só se
 aplica para o mesmo terminal no qual as variáveis de ambiente foram
 configuradas.
+
+[ak]: <https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_05_0003.html>
+[console]: <https://console-intl.huaweicloud.com/>

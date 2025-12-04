@@ -8,12 +8,12 @@
     alt="Huawei Cloud" width="450px" height="102px">
 </a>
 
-This project contains a minimal structure for [Terraform](https://developer.hashicorp.com/terraform/docs)
-projects using [Huawei Cloud](https://www.huaweicloud.com/intl/en-us) provider,
-following some practices and references found around the web (listed at the end).
+This project contains a minimal structure for [Terraform][terraform] projects
+using [Huawei Cloud][hwc] provider, following some practices and references
+found around the web (listed at the end).
 
-Read [Huawei Cloud Terraform provider documentation](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs)
-to know which resources are available and how to use them.
+Read [Huawei Cloud Terraform provider documentation][hwc-provider] to know
+which resources are available and how to use them.
 
 - [Huawei Cloud Terraform Boilerplate](#huawei-cloud-terraform-boilerplate)
   - [👣 First Steps](#-first-steps)
@@ -74,3 +74,7 @@ by running `terraform fmt` command.
 - Digital Ocean's [How To Structure a Terraform Project](https://www.digitalocean.com/community/tutorials/how-to-structure-a-terraform-project)
 - Terraform's [Style Conventions](https://developer.hashicorp.com/terraform/language/syntax/style)
 - Google Cloud's [Best practices for using Terraform](https://cloud.google.com/docs/terraform/best-practices-for-terraform)
+
+[terraform]: <https://developer.hashicorp.com/terraform/docs>
+[hwc]: <https://www.huaweicloud.com/intl/en-us>
+[hwc-provider]: <https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs>

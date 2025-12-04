@@ -78,11 +78,10 @@ An access key comprises an **access key ID (AK)** and **secret access key (SK)**
 and is used as a long-term identity credential to sign your requests for Huawei
 Cloud APIs (made by Terraform provider). AK is used together with SK to sign
 requests cryptographically, ensuring that the requests are secret, complete,
-and correct. For more details, see
-[Access Keys documentation](https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_01_0003.html)
+and correct. For more details, see [Access Keys documentation][ak]
 
 To create an access key for your Huawei Cloud account, first log in to
-[Huawei Cloud Console](https://console-intl.huaweicloud.com/).
+[Huawei Cloud Console][console].
 
 1. Put your mouse over your username in the top right corner (A) and click on
    "My Credentials" (B) in the dropdown menu;
@@ -154,3 +153,6 @@ export TF_LOG_PATH="tf_log.txt"
 Then run the Terraform command again. The debug logs will be saved in the
 `tf_log.txt` file. Please note that this debug configuration only applies to
 the same terminal where the environment variables were previously configured.
+
+[ak]: <https://support.huaweicloud.com/intl/en-us/usermanual-ca/ca_05_0003.html>
+[console]: <https://console-intl.huaweicloud.com/>
